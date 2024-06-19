@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D0730E92C2302E90053A774 /* ManagedEnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730E82C2302E90053A774 /* ManagedEnvironmentKeys.swift */; };
 		4D0730EB2C2305410053A774 /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730EA2C2305410053A774 /* BundleHelper.swift */; };
+		4D0730ED2C230AE80053A774 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730EC2C230AE80053A774 /* CoreDataStack.swift */; };
+		4D0730EF2C230B850053A774 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730EE2C230B850053A774 /* CoreDataHelper.swift */; };
 		4D3861412C21B601000B51AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D3861402C21B601000B51AA /* Alamofire */; };
 		4D3861462C21B876000B51AA /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861452C21B876000B51AA /* BaseAPIService.swift */; };
 		4D3861482C21B980000B51AA /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861472C21B980000B51AA /* NetworkingError.swift */; };
@@ -53,6 +55,8 @@
 		4D0730E62C2300850053A774 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		4D0730E82C2302E90053A774 /* ManagedEnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEnvironmentKeys.swift; sourceTree = "<group>"; };
 		4D0730EA2C2305410053A774 /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
+		4D0730EC2C230AE80053A774 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		4D0730EE2C230B850053A774 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		4D3861452C21B876000B51AA /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		4D3861472C21B980000B51AA /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		4D38614A2C21BC22000B51AA /* NewsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIService.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				4D6E52872C20860C0041FC86 /* MKNewsReader.xcdatamodeld */,
+				4D0730EC2C230AE80053A774 /* CoreDataStack.swift */,
+				4D0730EE2C230B850053A774 /* CoreDataHelper.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -427,9 +433,11 @@
 				4D6E526D2C20852A0041FC86 /* ViewController.swift in Sources */,
 				4D38614E2C21C049000B51AA /* ISO8601DateWrapper.swift in Sources */,
 				4D3861582C21E343000B51AA /* API.swift in Sources */,
+				4D0730ED2C230AE80053A774 /* CoreDataStack.swift in Sources */,
 				4D38614B2C21BC22000B51AA /* NewsAPIService.swift in Sources */,
 				4D3861482C21B980000B51AA /* NetworkingError.swift in Sources */,
 				4D3861562C21DA1C000B51AA /* ArticleSourceEntity.swift in Sources */,
+				4D0730EF2C230B850053A774 /* CoreDataHelper.swift in Sources */,
 				4D6E526C2C20852A0041FC86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

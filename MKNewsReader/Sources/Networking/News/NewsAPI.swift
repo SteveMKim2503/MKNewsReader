@@ -33,7 +33,7 @@ enum NewsAPI: API {
         case .koreanTopHeadlineNews:
             return [
                 "country": "kr",
-                "apiKey": ""
+                "apiKey": ManagedEnvironmentKeys().newsAPIKey
             ]
         }
     }

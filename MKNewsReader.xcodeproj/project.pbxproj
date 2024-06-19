@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0730E92C2302E90053A774 /* ManagedEnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730E82C2302E90053A774 /* ManagedEnvironmentKeys.swift */; };
+		4D0730EB2C2305410053A774 /* BundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0730EA2C2305410053A774 /* BundleHelper.swift */; };
 		4D3861412C21B601000B51AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D3861402C21B601000B51AA /* Alamofire */; };
 		4D3861462C21B876000B51AA /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861452C21B876000B51AA /* BaseAPIService.swift */; };
 		4D3861482C21B980000B51AA /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861472C21B980000B51AA /* NetworkingError.swift */; };
@@ -47,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0730E52C23007C0053A774 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		4D0730E62C2300850053A774 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		4D0730E82C2302E90053A774 /* ManagedEnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedEnvironmentKeys.swift; sourceTree = "<group>"; };
+		4D0730EA2C2305410053A774 /* BundleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleHelper.swift; sourceTree = "<group>"; };
 		4D3861452C21B876000B51AA /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		4D3861472C21B980000B51AA /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		4D38614A2C21BC22000B51AA /* NewsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPIService.swift; sourceTree = "<group>"; };
@@ -98,6 +104,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0730E22C22FFD30053A774 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				4D0730E52C23007C0053A774 /* Release.xcconfig */,
+				4D0730E62C2300850053A774 /* Debug.xcconfig */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		4D0730E72C2302C20053A774 /* ManagedEnvironmentKeys */ = {
+			isa = PBXGroup;
+			children = (
+				4D0730E82C2302E90053A774 /* ManagedEnvironmentKeys.swift */,
+			);
+			path = ManagedEnvironmentKeys;
+			sourceTree = "<group>";
+		};
 		4D3861492C21BC0D000B51AA /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4D38614D2C21C049000B51AA /* ISO8601DateWrapper.swift */,
+				4D0730EA2C2305410053A774 /* BundleHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -142,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4D6E52962C208D780041FC86 /* Info.plist */,
+				4D0730E22C22FFD30053A774 /* Configs */,
 				4D6E52692C20852A0041FC86 /* Resources */,
 				4D6E52622C20852A0041FC86 /* Sources */,
 			);
@@ -168,6 +193,7 @@
 		4D6E52622C20852A0041FC86 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4D0730E72C2302C20053A774 /* ManagedEnvironmentKeys */,
 				4D6E52D82C208E660041FC86 /* Database */,
 				4D6E528D2C20892F0041FC86 /* Networking */,
 				4D6E528F2C2089A50041FC86 /* Repository */,
@@ -396,6 +422,8 @@
 				4D3861542C21DA05000B51AA /* ArticleEntity.swift in Sources */,
 				4D38615A2C21E408000B51AA /* NewsAPI.swift in Sources */,
 				4D3861502C21D9A2000B51AA /* APIPublisher.swift in Sources */,
+				4D0730EB2C2305410053A774 /* BundleHelper.swift in Sources */,
+				4D0730E92C2302E90053A774 /* ManagedEnvironmentKeys.swift in Sources */,
 				4D6E526D2C20852A0041FC86 /* ViewController.swift in Sources */,
 				4D38614E2C21C049000B51AA /* ISO8601DateWrapper.swift in Sources */,
 				4D3861582C21E343000B51AA /* API.swift in Sources */,
@@ -452,6 +480,7 @@
 /* Begin XCBuildConfiguration section */
 		4D6E52532C2084D20041FC86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0730E62C2300850053A774 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -515,6 +544,7 @@
 		};
 		4D6E52542C2084D20041FC86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D0730E52C23007C0053A774 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

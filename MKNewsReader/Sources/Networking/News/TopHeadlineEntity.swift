@@ -9,6 +9,6 @@ import Foundation
 
 struct TopHeadlineEntity: Codable {
     let status: String
-    let totalResults: Int
-    let articles: [ArticleEntity]
+    let totalResults: Int?
+    let articles: [ArticleEntity]?
 }

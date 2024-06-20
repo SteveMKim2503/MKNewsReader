@@ -95,7 +95,7 @@ final class NewsRepository: ObservableObject, NewsRepositoryProtocol {
 private extension NewsRepository {
     
     func mapTopHeadlineEntityToNewsContents(_ entity: TopHeadlineEntity) -> [NewsContent] {
-        return entity.articles.compactMap { article in
+        return entity.articles?.compactMap { article in
             return NewsContent(
                 title: article.title,
                 publishedAt: article.publishedAt,
@@ -103,7 +103,7 @@ private extension NewsRepository {
                 imageData: nil,
                 isRead: false
             )
-        }
+        } ?? []
     }
     
     func mapNewsContentDBEntitiesToNewsContents(_ entities: [NewsContentDBEntity]) -> [NewsContent] {

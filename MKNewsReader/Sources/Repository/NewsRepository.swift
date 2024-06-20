@@ -5,7 +5,7 @@
 //  Created by MK on 6/20/24.
 //
 
-import UIKit
+import Foundation
 import Combine
 
 protocol NewsRepositoryProtocol: AnyObject {
@@ -13,7 +13,7 @@ protocol NewsRepositoryProtocol: AnyObject {
     
     func fetchTopHeadlineNews()
     func updateAsRead(newsContentID: UUID)
-    func saveImage(_ image: UIImage, newsContentID: UUID)
+    func saveImageData(_ imageData: Data, newsContentID: UUID)
 }
 
 final class NewsRepository: ObservableObject, NewsRepositoryProtocol {
@@ -73,18 +73,18 @@ final class NewsRepository: ObservableObject, NewsRepositoryProtocol {
         }
     }
     
-    func saveImage(_ image: UIImage, newsContentID: UUID) {
+    func saveImageData(_ imageData: Data, newsContentID: UUID) {
         let newNewsContents: [NewsContent] = newsContentsSubject.value.compactMap { newsContent in
             guard newsContent.id == newsContentID else { return newsContent }
             
             var newNewsContent = newsContent
-            newNewsContent.image = image
+            newNewsContent.imageData = imageData
             return newNewsContent
         }
         newsContentsSubject.send(newNewsContents)
         
         if let dbEntity = newsDBService.fetchNewsContent(using: newsContentID) {
-            dbEntity.imageData = image.pngData()
+            dbEntity.imageData = imageData
             newsDBService.updateNewsContent(dbEntity)
         }
     }
@@ -100,7 +100,7 @@ private extension NewsRepository {
                 title: article.title,
                 publishedAt: article.publishedAt,
                 imageURL: article.urlToImage,
-                image: nil,
+                imageData: nil,
                 isRead: false
             )
         }
@@ -112,15 +112,11 @@ private extension NewsRepository {
                 guard let imageURLString = entity.imageURLString else { return nil }
                 return URL(string: imageURLString)
             }()
-            let image: UIImage? = {
-                guard let imageData = entity.imageData else { return nil }
-                return UIImage(data: imageData)
-            }()
             return NewsContent(
                 title: entity.title,
                 publishedAt: entity.publishedAt,
                 imageURL: imageURL,
-                image: image,
+                imageData: entity.imageData,
                 isRead: entity.isRead
             )
         }

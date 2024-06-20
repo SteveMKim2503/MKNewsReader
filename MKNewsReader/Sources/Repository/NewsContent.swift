@@ -5,7 +5,7 @@
 //  Created by MK on 6/20/24.
 //
 
-import UIKit
+import Foundation
 
 struct NewsContent: Identifiable, Equatable {
     let id: UUID = UUID()
@@ -13,6 +13,6 @@ struct NewsContent: Identifiable, Equatable {
     let title: String?
     let publishedAt: Date?
     let imageURL: URL?
-    var image: UIImage?
+    var imageData: Data?
     var isRead: Bool
 }

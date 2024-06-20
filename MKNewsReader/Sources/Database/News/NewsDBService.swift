@@ -5,7 +5,7 @@
 //  Created by MK on 6/19/24.
 //
 
-import UIKit
+import Foundation
 
 protocol NewsDBServiceProtocol {
     func saveNewsContents(_ newsContents: [NewsContent])
@@ -27,10 +27,7 @@ final class NewsDBService: NewsDBServiceProtocol {
             entity.publishedAt = newsContent.publishedAt
             entity.imageURLString = newsContent.imageURL?.absoluteString
             entity.isRead = newsContent.isRead
-            
-            if let image = newsContent.image {
-                entity.imageData = image.pngData()
-            }
+            entity.imageData = newsContent.imageData
         }
         
         coreDataHelper.saveContext()

@@ -25,12 +25,27 @@
 		4D3861582C21E343000B51AA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861572C21E343000B51AA /* API.swift */; };
 		4D38615A2C21E408000B51AA /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3861592C21E408000B51AA /* NewsAPI.swift */; };
 		4D4ACE152C2416A1007C0DDE /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D126EB72C23CBA40042E6E5 /* NewsRepository.swift */; };
+		4D4ACE1A2C2417E5007C0DDE /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ACE192C2417E5007C0DDE /* NewsListViewController.swift */; };
+		4D4ACE1C2C241900007C0DDE /* NewsListViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ACE1B2C241900007C0DDE /* NewsListViewController+ViewModel.swift */; };
+		4D4ACE272C2428CA007C0DDE /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ACE262C2428CA007C0DDE /* Collection+Extension.swift */; };
+		4D4ACE292C242E66007C0DDE /* NewsListViewController+ViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ACE282C242E66007C0DDE /* NewsListViewController+ViewHolder.swift */; };
+		4D4ACE2E2C2430B2007C0DDE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D4ACE2D2C2430B2007C0DDE /* SnapKit */; };
+		4D5C72912C243270005C979F /* NewsListViewController+NewsListCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72902C243270005C979F /* NewsListViewController+NewsListCollectionViewAdapter.swift */; };
+		4D5C72932C2432E5005C979F /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72922C2432E5005C979F /* UICollectionView+Extension.swift */; };
+		4D5C72962C24335F005C979F /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72952C24335F005C979F /* BaseCollectionViewCell.swift */; };
+		4D5C729A2C243511005C979F /* NewsListViewController+NewsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72992C243511005C979F /* NewsListViewController+NewsContentCell.swift */; };
+		4D5C729C2C24355D005C979F /* NewsListViewController+NewsContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C729B2C24355D005C979F /* NewsListViewController+NewsContentView.swift */; };
+		4D5C729E2C24383B005C979F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C729D2C24383B005C979F /* UIImageView+Extension.swift */; };
+		4D5C72A12C243884005C979F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4D5C72A02C243884005C979F /* Kingfisher */; };
+		4D5C72A32C243975005C979F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72A22C243975005C979F /* BaseView.swift */; };
+		4D5C72A52C243C12005C979F /* NewsListViewController+HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72A42C243C12005C979F /* NewsListViewController+HeaderView.swift */; };
+		4D5C72A72C243D21005C979F /* NewsListViewController+HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72A62C243D21005C979F /* NewsListViewController+HeaderCell.swift */; };
+		4D5C72AB2C244797005C979F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C72AA2C244797005C979F /* Date+Extension.swift */; };
 		4D6E52462C2084D20041FC86 /* MKNewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52452C2084D20041FC86 /* MKNewsReaderTests.swift */; };
 		4D6E52502C2084D20041FC86 /* MKNewsReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E524F2C2084D20041FC86 /* MKNewsReaderUITests.swift */; };
 		4D6E52522C2084D20041FC86 /* MKNewsReaderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52512C2084D20041FC86 /* MKNewsReaderUITestsLaunchTests.swift */; };
 		4D6E526B2C20852A0041FC86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E525F2C20852A0041FC86 /* AppDelegate.swift */; };
 		4D6E526C2C20852A0041FC86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52602C20852A0041FC86 /* SceneDelegate.swift */; };
-		4D6E526D2C20852A0041FC86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52612C20852A0041FC86 /* ViewController.swift */; };
 		4D6E52892C20860C0041FC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52812C20860C0041FC86 /* Assets.xcassets */; };
 		4D6E528A2C20860C0041FC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52832C20860C0041FC86 /* LaunchScreen.storyboard */; };
 		4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52872C20860C0041FC86 /* MKNewsReader.xcdatamodeld */; };
@@ -73,6 +88,20 @@
 		4D3861552C21DA1C000B51AA /* ArticleSourceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSourceEntity.swift; sourceTree = "<group>"; };
 		4D3861572C21E343000B51AA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4D3861592C21E408000B51AA /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		4D4ACE192C2417E5007C0DDE /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		4D4ACE1B2C241900007C0DDE /* NewsListViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		4D4ACE262C2428CA007C0DDE /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		4D4ACE282C242E66007C0DDE /* NewsListViewController+ViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+ViewHolder.swift"; sourceTree = "<group>"; };
+		4D5C72902C243270005C979F /* NewsListViewController+NewsListCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+NewsListCollectionViewAdapter.swift"; sourceTree = "<group>"; };
+		4D5C72922C2432E5005C979F /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		4D5C72952C24335F005C979F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D5C72992C243511005C979F /* NewsListViewController+NewsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+NewsContentCell.swift"; sourceTree = "<group>"; };
+		4D5C729B2C24355D005C979F /* NewsListViewController+NewsContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+NewsContentView.swift"; sourceTree = "<group>"; };
+		4D5C729D2C24383B005C979F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		4D5C72A22C243975005C979F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		4D5C72A42C243C12005C979F /* NewsListViewController+HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+HeaderView.swift"; sourceTree = "<group>"; };
+		4D5C72A62C243D21005C979F /* NewsListViewController+HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsListViewController+HeaderCell.swift"; sourceTree = "<group>"; };
+		4D5C72AA2C244797005C979F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		4D6E52282C2084D00041FC86 /* MKNewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MKNewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6E52412C2084D20041FC86 /* MKNewsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKNewsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6E52452C2084D20041FC86 /* MKNewsReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKNewsReaderTests.swift; sourceTree = "<group>"; };
@@ -81,7 +110,6 @@
 		4D6E52512C2084D20041FC86 /* MKNewsReaderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKNewsReaderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D6E525F2C20852A0041FC86 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D6E52602C20852A0041FC86 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4D6E52612C20852A0041FC86 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D6E52812C20860C0041FC86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6E52822C20860C0041FC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D6E52882C20860C0041FC86 /* MKNewsReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MKNewsReader.xcdatamodel; sourceTree = "<group>"; };
@@ -93,7 +121,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D5C72A12C243884005C979F /* Kingfisher in Frameworks */,
 				4D3861412C21B601000B51AA /* Alamofire in Frameworks */,
+				4D4ACE2E2C2430B2007C0DDE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +190,65 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		4D4ACE162C24178C007C0DDE /* News */ = {
+			isa = PBXGroup;
+			children = (
+				4D4ACE172C2417B0007C0DDE /* NewsList */,
+				4D4ACE182C2417BF007C0DDE /* NewsDetail */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		4D4ACE172C2417B0007C0DDE /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				4D4ACE192C2417E5007C0DDE /* NewsListViewController.swift */,
+				4D4ACE282C242E66007C0DDE /* NewsListViewController+ViewHolder.swift */,
+				4D4ACE1B2C241900007C0DDE /* NewsListViewController+ViewModel.swift */,
+				4D5C72902C243270005C979F /* NewsListViewController+NewsListCollectionViewAdapter.swift */,
+				4D5C72982C2434E8005C979F /* View */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		4D4ACE182C2417BF007C0DDE /* NewsDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		4D5C72942C243351005C979F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C72952C24335F005C979F /* BaseCollectionViewCell.swift */,
+				4D5C72A22C243975005C979F /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4D5C72972C2433B5005C979F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4D4ACE262C2428CA007C0DDE /* Collection+Extension.swift */,
+				4D5C72922C2432E5005C979F /* UICollectionView+Extension.swift */,
+				4D5C729D2C24383B005C979F /* UIImageView+Extension.swift */,
+				4D5C72AA2C244797005C979F /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4D5C72982C2434E8005C979F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D5C72992C243511005C979F /* NewsListViewController+NewsContentCell.swift */,
+				4D5C729B2C24355D005C979F /* NewsListViewController+NewsContentView.swift */,
+				4D5C72A62C243D21005C979F /* NewsListViewController+HeaderCell.swift */,
+				4D5C72A42C243C12005C979F /* NewsListViewController+HeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		4D6E521F2C2084D00041FC86 = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +305,9 @@
 				4D6E528D2C20892F0041FC86 /* Networking */,
 				4D6E528F2C2089A50041FC86 /* Repository */,
 				4D6E528E2C20897F0041FC86 /* Presenter */,
+				4D5C72942C243351005C979F /* Base */,
 				4D38614C2C21C033000B51AA /* Common */,
+				4D5C72972C2433B5005C979F /* Extension */,
 				4D6E525F2C20852A0041FC86 /* AppDelegate.swift */,
 				4D6E52602C20852A0041FC86 /* SceneDelegate.swift */,
 			);
@@ -255,7 +346,7 @@
 		4D6E528E2C20897F0041FC86 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				4D6E52612C20852A0041FC86 /* ViewController.swift */,
+				4D4ACE162C24178C007C0DDE /* News */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -299,6 +390,8 @@
 			name = MKNewsReader;
 			packageProductDependencies = (
 				4D3861402C21B601000B51AA /* Alamofire */,
+				4D4ACE2D2C2430B2007C0DDE /* SnapKit */,
+				4D5C72A02C243884005C979F /* Kingfisher */,
 			);
 			productName = MKNewsReader;
 			productReference = 4D6E52282C2084D00041FC86 /* MKNewsReader.app */;
@@ -374,6 +467,8 @@
 			mainGroup = 4D6E521F2C2084D00041FC86;
 			packageReferences = (
 				4D38613F2C21B601000B51AA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4D4ACE2C2C2430B2007C0DDE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4D5C729F2C243884005C979F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 4D6E52292C2084D00041FC86 /* Products */;
 			projectDirPath = "";
@@ -439,23 +534,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4ACE152C2416A1007C0DDE /* NewsRepository.swift in Sources */,
+				4D5C72912C243270005C979F /* NewsListViewController+NewsListCollectionViewAdapter.swift in Sources */,
+				4D5C72A72C243D21005C979F /* NewsListViewController+HeaderCell.swift in Sources */,
+				4D5C729A2C243511005C979F /* NewsListViewController+NewsContentCell.swift in Sources */,
+				4D5C729C2C24355D005C979F /* NewsListViewController+NewsContentView.swift in Sources */,
 				4D0730F22C2312A40053A774 /* NewsDBService.swift in Sources */,
 				4D6E526B2C20852A0041FC86 /* AppDelegate.swift in Sources */,
 				4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */,
 				4D3861522C21D9F1000B51AA /* TopHeadlineEntity.swift in Sources */,
 				4D3861462C21B876000B51AA /* BaseAPIService.swift in Sources */,
+				4D5C72A32C243975005C979F /* BaseView.swift in Sources */,
 				4D3861542C21DA05000B51AA /* ArticleEntity.swift in Sources */,
 				4D38615A2C21E408000B51AA /* NewsAPI.swift in Sources */,
+				4D4ACE1C2C241900007C0DDE /* NewsListViewController+ViewModel.swift in Sources */,
+				4D4ACE272C2428CA007C0DDE /* Collection+Extension.swift in Sources */,
 				4D3861502C21D9A2000B51AA /* APIPublisher.swift in Sources */,
 				4D0730EB2C2305410053A774 /* BundleHelper.swift in Sources */,
+				4D5C72AB2C244797005C979F /* Date+Extension.swift in Sources */,
 				4D126EBA2C23D17F0042E6E5 /* NewsContent.swift in Sources */,
 				4D0730E92C2302E90053A774 /* ManagedEnvironmentKeys.swift in Sources */,
-				4D6E526D2C20852A0041FC86 /* ViewController.swift in Sources */,
+				4D5C72A52C243C12005C979F /* NewsListViewController+HeaderView.swift in Sources */,
+				4D5C72932C2432E5005C979F /* UICollectionView+Extension.swift in Sources */,
 				4D38614E2C21C049000B51AA /* ISO8601DateWrapper.swift in Sources */,
 				4D3861582C21E343000B51AA /* API.swift in Sources */,
 				4D0730ED2C230AE80053A774 /* CoreDataStack.swift in Sources */,
+				4D5C72962C24335F005C979F /* BaseCollectionViewCell.swift in Sources */,
 				4D38614B2C21BC22000B51AA /* NewsAPIService.swift in Sources */,
 				4D3861482C21B980000B51AA /* NetworkingError.swift in Sources */,
+				4D5C729E2C24383B005C979F /* UIImageView+Extension.swift in Sources */,
+				4D4ACE1A2C2417E5007C0DDE /* NewsListViewController.swift in Sources */,
+				4D4ACE292C242E66007C0DDE /* NewsListViewController+ViewHolder.swift in Sources */,
 				4D3861562C21DA1C000B51AA /* ArticleSourceEntity.swift in Sources */,
 				4D0730EF2C230B850053A774 /* CoreDataHelper.swift in Sources */,
 				4D6E526C2C20852A0041FC86 /* SceneDelegate.swift in Sources */,
@@ -559,7 +667,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -617,7 +725,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -640,7 +748,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,7 +775,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -803,6 +911,22 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		4D4ACE2C2C2430B2007C0DDE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		4D5C729F2C243884005C979F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -810,6 +934,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D38613F2C21B601000B51AA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4D4ACE2D2C2430B2007C0DDE /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D4ACE2C2C2430B2007C0DDE /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		4D5C72A02C243884005C979F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D5C729F2C243884005C979F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

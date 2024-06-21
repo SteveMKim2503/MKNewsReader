@@ -9,7 +9,7 @@ import Foundation
 
 struct ArticleEntity: Codable {
     let source: ArticleSourceEntity?
-    let author: String
+    let author: String?
     let title: String?
     let description: String?
     let url: URL?

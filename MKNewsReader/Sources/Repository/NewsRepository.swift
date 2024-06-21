@@ -100,6 +100,7 @@ private extension NewsRepository {
                 title: article.title,
                 publishedAt: article.publishedAt,
                 imageURL: article.urlToImage,
+                contentURL: article.url,
                 imageData: nil,
                 isRead: false
             )
@@ -112,10 +113,15 @@ private extension NewsRepository {
                 guard let imageURLString = entity.imageURLString else { return nil }
                 return URL(string: imageURLString)
             }()
+            let contentURL: URL? = {
+                guard let contentURLString = entity.contentURLString else { return nil }
+                return URL(string: contentURLString)
+            }()
             return NewsContent(
                 title: entity.title,
                 publishedAt: entity.publishedAt,
                 imageURL: imageURL,
+                contentURL: contentURL,
                 imageData: entity.imageData,
                 isRead: entity.isRead
             )
@@ -133,7 +139,7 @@ private extension NewsRepository {
     
     func sortedNewsContentUsingPublishedAt(_ newsContents: [NewsContent]) -> [NewsContent] {
         return newsContents.sorted(by: {
-            $0.publishedAt ?? Date(timeIntervalSince1970: 0) < $1.publishedAt ?? Date(timeIntervalSince1970: 0)
+            $0.publishedAt ?? Date(timeIntervalSince1970: 0) > $1.publishedAt ?? Date(timeIntervalSince1970: 0)
         })
     }
 }

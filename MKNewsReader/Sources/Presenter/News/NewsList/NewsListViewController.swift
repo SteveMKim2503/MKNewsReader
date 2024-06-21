@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class NewsListViewController: UIViewController {
+final class NewsListViewController: BaseViewController {
     
     // MARK: - Private Property
     
@@ -37,19 +37,10 @@ final class NewsListViewController: UIViewController {
         viewHolder.configureConstraints(for: view)
         
         bindCollectionView()
-        bindCollectionViewLayout()
         bindInteraction()
         bindOutput()
         
         viewModel.interaction.viewDidLoad.send(())
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        
-        coordinator.animate { _ in
-            self.bindCollectionViewLayout()
-        }
     }
     
     // MARK: - Bind
@@ -57,9 +48,6 @@ final class NewsListViewController: UIViewController {
     private func bindCollectionView() {
         viewHolder.newsListCollectionView.dataSource = newsListCollectionViewAdepter
         viewHolder.newsListCollectionView.delegate = newsListCollectionViewAdepter
-    }
-    
-    private func bindCollectionViewLayout() {
         viewHolder.newsListCollectionView.setCollectionViewLayout(newsListCollectionViewLayout, animated: false)
     }
     
@@ -72,6 +60,13 @@ final class NewsListViewController: UIViewController {
     }
     
     private func bindOutput() {
+        viewModel.output.title
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] title in
+                self?.title = title
+            })
+            .store(in: &cancellableBag)
+        
         viewModel.output.sections
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] sections in

@@ -13,6 +13,7 @@ struct NewsContent: Identifiable, Equatable {
     let title: String?
     let publishedAt: Date?
     let imageURL: URL?
+    let contentURL: URL?
     var imageData: Data?
     var isRead: Bool
 }

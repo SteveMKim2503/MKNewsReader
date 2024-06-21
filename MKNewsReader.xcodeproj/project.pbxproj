@@ -49,6 +49,9 @@
 		4D6E52892C20860C0041FC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52812C20860C0041FC86 /* Assets.xcassets */; };
 		4D6E528A2C20860C0041FC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52832C20860C0041FC86 /* LaunchScreen.storyboard */; };
 		4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52872C20860C0041FC86 /* MKNewsReader.xcdatamodeld */; };
+		4DE6C5E02C25A74C00BD3E00 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5DF2C25A74C00BD3E00 /* NewsDetailViewController.swift */; };
+		4DE6C5E22C25A76F00BD3E00 /* NewsDetailViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E12C25A76F00BD3E00 /* NewsDetailViewController+ViewModel.swift */; };
+		4DE6C5E42C25A78600BD3E00 /* NewsDetailViewController+ViewHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E32C25A78600BD3E00 /* NewsDetailViewController+ViewHolder.swift */; };
 		4DE6C5E82C25B3F700BD3E00 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E72C25B3F700BD3E00 /* BaseNavigationController.swift */; };
 		4DE6C5EA2C25B57400BD3E00 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E92C25B57400BD3E00 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -116,6 +119,9 @@
 		4D6E52822C20860C0041FC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D6E52882C20860C0041FC86 /* MKNewsReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MKNewsReader.xcdatamodel; sourceTree = "<group>"; };
 		4D6E52962C208D780041FC86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE6C5DF2C25A74C00BD3E00 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		4DE6C5E12C25A76F00BD3E00 /* NewsDetailViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsDetailViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		4DE6C5E32C25A78600BD3E00 /* NewsDetailViewController+ViewHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsDetailViewController+ViewHolder.swift"; sourceTree = "<group>"; };
 		4DE6C5E72C25B3F700BD3E00 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		4DE6C5E92C25B57400BD3E00 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +224,9 @@
 		4D4ACE182C2417BF007C0DDE /* NewsDetail */ = {
 			isa = PBXGroup;
 			children = (
+				4DE6C5DF2C25A74C00BD3E00 /* NewsDetailViewController.swift */,
+				4DE6C5E32C25A78600BD3E00 /* NewsDetailViewController+ViewHolder.swift */,
+				4DE6C5E12C25A76F00BD3E00 /* NewsDetailViewController+ViewModel.swift */,
 			);
 			path = NewsDetail;
 			sourceTree = "<group>";
@@ -549,7 +558,9 @@
 				4D6E526B2C20852A0041FC86 /* AppDelegate.swift in Sources */,
 				4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */,
 				4D3861522C21D9F1000B51AA /* TopHeadlineEntity.swift in Sources */,
+				4DE6C5E22C25A76F00BD3E00 /* NewsDetailViewController+ViewModel.swift in Sources */,
 				4D3861462C21B876000B51AA /* BaseAPIService.swift in Sources */,
+				4DE6C5E42C25A78600BD3E00 /* NewsDetailViewController+ViewHolder.swift in Sources */,
 				4D5C72A32C243975005C979F /* BaseView.swift in Sources */,
 				4D3861542C21DA05000B51AA /* ArticleEntity.swift in Sources */,
 				4D38615A2C21E408000B51AA /* NewsAPI.swift in Sources */,
@@ -565,6 +576,7 @@
 				4D38614E2C21C049000B51AA /* ISO8601DateWrapper.swift in Sources */,
 				4D3861582C21E343000B51AA /* API.swift in Sources */,
 				4DE6C5E82C25B3F700BD3E00 /* BaseNavigationController.swift in Sources */,
+				4DE6C5E02C25A74C00BD3E00 /* NewsDetailViewController.swift in Sources */,
 				4D0730ED2C230AE80053A774 /* CoreDataStack.swift in Sources */,
 				4D5C72962C24335F005C979F /* BaseCollectionViewCell.swift in Sources */,
 				4D38614B2C21BC22000B51AA /* NewsAPIService.swift in Sources */,

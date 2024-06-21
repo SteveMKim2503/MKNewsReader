@@ -89,7 +89,12 @@ final class NewsListViewController: BaseViewController {
 private extension NewsListViewController {
     
     func moveToNewsDetail(with id: UUID) {
-        // TODO: -
+        let vm = NewsDetailViewController.ViewModel(
+            payload: .init(newsContentID: id),
+            dependency: .init(newsRepository: viewModel.dependency.newsRepository)
+        )
+        let vc = NewsDetailViewController(viewModel: vm)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

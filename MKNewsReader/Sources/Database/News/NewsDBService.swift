@@ -26,6 +26,7 @@ final class NewsDBService: NewsDBServiceProtocol {
             entity.title = newsContent.title
             entity.publishedAt = newsContent.publishedAt
             entity.imageURLString = newsContent.imageURL?.absoluteString
+            entity.contentURLString = newsContent.contentURL?.absoluteString
             entity.isRead = newsContent.isRead
             entity.imageData = newsContent.imageData
         }

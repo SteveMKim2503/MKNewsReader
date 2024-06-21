@@ -49,6 +49,8 @@
 		4D6E52892C20860C0041FC86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52812C20860C0041FC86 /* Assets.xcassets */; };
 		4D6E528A2C20860C0041FC86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6E52832C20860C0041FC86 /* LaunchScreen.storyboard */; };
 		4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D6E52872C20860C0041FC86 /* MKNewsReader.xcdatamodeld */; };
+		4DE6C5E82C25B3F700BD3E00 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E72C25B3F700BD3E00 /* BaseNavigationController.swift */; };
+		4DE6C5EA2C25B57400BD3E00 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE6C5E92C25B57400BD3E00 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		4D6E52822C20860C0041FC86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D6E52882C20860C0041FC86 /* MKNewsReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MKNewsReader.xcdatamodel; sourceTree = "<group>"; };
 		4D6E52962C208D780041FC86 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE6C5E72C25B3F700BD3E00 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		4DE6C5E92C25B57400BD3E00 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,8 @@
 		4D5C72942C243351005C979F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				4DE6C5E72C25B3F700BD3E00 /* BaseNavigationController.swift */,
+				4DE6C5E92C25B57400BD3E00 /* BaseViewController.swift */,
 				4D5C72952C24335F005C979F /* BaseCollectionViewCell.swift */,
 				4D5C72A22C243975005C979F /* BaseView.swift */,
 			);
@@ -538,6 +544,7 @@
 				4D5C72A72C243D21005C979F /* NewsListViewController+HeaderCell.swift in Sources */,
 				4D5C729A2C243511005C979F /* NewsListViewController+NewsContentCell.swift in Sources */,
 				4D5C729C2C24355D005C979F /* NewsListViewController+NewsContentView.swift in Sources */,
+				4DE6C5EA2C25B57400BD3E00 /* BaseViewController.swift in Sources */,
 				4D0730F22C2312A40053A774 /* NewsDBService.swift in Sources */,
 				4D6E526B2C20852A0041FC86 /* AppDelegate.swift in Sources */,
 				4D6E528C2C20860C0041FC86 /* MKNewsReader.xcdatamodeld in Sources */,
@@ -557,6 +564,7 @@
 				4D5C72932C2432E5005C979F /* UICollectionView+Extension.swift in Sources */,
 				4D38614E2C21C049000B51AA /* ISO8601DateWrapper.swift in Sources */,
 				4D3861582C21E343000B51AA /* API.swift in Sources */,
+				4DE6C5E82C25B3F700BD3E00 /* BaseNavigationController.swift in Sources */,
 				4D0730ED2C230AE80053A774 /* CoreDataStack.swift in Sources */,
 				4D5C72962C24335F005C979F /* BaseCollectionViewCell.swift in Sources */,
 				4D38614B2C21BC22000B51AA /* NewsAPIService.swift in Sources */,

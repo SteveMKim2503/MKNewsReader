@@ -29,6 +29,7 @@ extension NewsListViewController {
     }
     
     struct Output {
+        let title = Just("News")
         let sections = CurrentValueSubject<[NewsListSectionType], Never>([])
         
         let moveToNewsDetail = PassthroughSubject<UUID, Never>()
@@ -43,9 +44,9 @@ extension NewsListViewController {
         
         let interaction = Interaction()
         let output = Output()
+        let dependency: Dependency
         
         private let payload: Payload
-        private let dependency: Dependency
         private var cancellableBag = Set<AnyCancellable>()
         private let maxItemCountPerLineForLandscape: Int = 5
         
@@ -64,7 +65,7 @@ extension NewsListViewController {
         
         // MARK: - Init
         
-        init(payload: Payload, dependency: Dependency = Dependency(newsRepository: NewsRepository())) {
+        init(payload: Payload, dependency: Dependency) {
             self.payload = payload
             self.dependency = dependency
             

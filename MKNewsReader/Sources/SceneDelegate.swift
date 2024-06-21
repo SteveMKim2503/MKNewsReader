@@ -19,9 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let vm = NewsListViewController.ViewModel(payload: .init())
+        let vm = NewsListViewController.ViewModel(
+            payload: .init(),
+            dependency: .init(newsRepository: NewsRepository())
+        )
         let vc = NewsListViewController(viewModel: vm)
-        let nc = UINavigationController(rootViewController: vc)
+        let nc = BaseNavigationController(rootViewController: vc)
         window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }

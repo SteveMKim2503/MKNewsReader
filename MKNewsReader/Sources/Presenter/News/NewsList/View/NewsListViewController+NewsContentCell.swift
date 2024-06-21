@@ -21,6 +21,14 @@ extension NewsListViewController {
             return NewsContentView()
         }()
         
+        // MARK: - LifeCycle
+        
+        override func prepareForReuse() {
+            super.prepareForReuse()
+            
+            content = nil
+        }
+        
         // MARK: - Configure
         
         override func configureViews() {

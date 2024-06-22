@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  MKNewsReader
+//
+//  Created by MK on 6/19/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// For News API (https://newsapi.org/)
+NEWS_API_KEY = 

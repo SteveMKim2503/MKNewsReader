@@ -8,11 +8,6 @@
 import UIKit
 import Combine
 
-enum NewsListSectionType: Equatable {
-    case header(_ title: String)
-    case newsContent(_ newsContents: [NewsContent])
-}
-
 extension NewsListViewController {
     
     struct Payload {
@@ -61,8 +56,6 @@ extension NewsListViewController {
             })
         }
         
-        private let newsContentsSubject = CurrentValueSubject<[NewsContent], Never>([])
-        
         // MARK: - Init
         
         init(payload: Payload, dependency: Dependency) {
@@ -77,7 +70,6 @@ extension NewsListViewController {
         
         private func bindRepository() {
             dependency.newsRepository.newsContentsPublisher
-                .handleEvents(receiveOutput: { [weak self] in self?.newsContentsSubject.send($0) })
                 .map(makeSections(with:))
                 .assign(to: \.value, on: output.sections)
                 .store(in: &cancellableBag)
@@ -100,29 +92,26 @@ extension NewsListViewController {
                 })
                 .store(in: &cancellableBag)
         }
-    }
-}
-
-// MARK: - Private Function
-
-private extension NewsListViewController.ViewModel {
-    
-    func makeSections(with newsContents: [NewsContent]) -> [NewsListSectionType] {
-        var sections: [NewsListSectionType] = []
-        sections.append(.header("Korean Top Headline News"))
         
-        var contents: [NewsContent] = []
-        for content in newsContents {
-            contents.append(content)
-            if contents.count == maxItemCountPerLineForLandscape {
-                sections.append(.newsContent(contents))
-                contents.removeAll()
+        // MARK: - Private Function
+        
+        private func makeSections(with newsContents: [NewsContent]) -> [NewsListSectionType] {
+            var sections: [NewsListSectionType] = []
+            sections.append(.header("Korean Top Headline News"))
+            
+            var contents: [NewsContent] = []
+            for content in newsContents {
+                contents.append(content)
+                if contents.count == maxItemCountPerLineForLandscape {
+                    sections.append(.newsContent(contents))
+                    contents.removeAll()
+                }
             }
+            if !contents.isEmpty {
+                sections.append(.newsContent(contents))
+            }
+            
+            return sections
         }
-        if !contents.isEmpty {
-            sections.append(.newsContent(contents))
-        }
-        
-        return sections
     }
 }

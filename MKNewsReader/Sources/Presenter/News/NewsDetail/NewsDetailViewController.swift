@@ -65,7 +65,7 @@ final class NewsDetailViewController: BaseViewController {
     }
 }
 
-// MARK: - Private func
+// MARK: - Private Function
 
 private extension NewsDetailViewController {
     

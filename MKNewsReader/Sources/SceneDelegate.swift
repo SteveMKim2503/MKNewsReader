@@ -19,12 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let vc = ViewController()
-        window?.rootViewController = vc
+        let vm = NewsListViewController.ViewModel(
+            payload: .init(),
+            dependency: .init(newsRepository: NewsRepository())
+        )
+        let vc = NewsListViewController(viewModel: vm)
+        let nc = BaseNavigationController(rootViewController: vc)
+        window?.rootViewController = nc
         window?.makeKeyAndVisible()
     }
     
     func sceneDidEnterBackground(_ scene: UIScene) {
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+        CoreDataStack.shared.saveContext()
     }
 }

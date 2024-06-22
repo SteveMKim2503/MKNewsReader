@@ -29,8 +29,7 @@ extension NewsListViewController {
         
         func configureConstraints(for view: UIView) {
             newsListCollectionView.snp.makeConstraints { make in
-                make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-                make.bottom.equalToSuperview()
+                make.edges.equalToSuperview()
             }
         }
     }

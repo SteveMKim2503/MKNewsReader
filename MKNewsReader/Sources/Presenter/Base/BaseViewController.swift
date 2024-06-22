@@ -9,6 +9,10 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    deinit {
+        print("\(String(describing: type(of: self))) : deinit")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
